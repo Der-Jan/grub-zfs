@@ -1,0 +1,40 @@
+From a055a1de10b17971cf999c5821fb9a9d373d01e8 Mon Sep 17 00:00:00 2001
+From: Der-Jan <de@r-jan.de>
+Date: Sat, 23 Aug 2014 10:26:03 +0000
+Subject: Link libzfs statically
+
+---
+ Makefile.util.def | 2 +-
+ configure.ac      | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.util.def b/Makefile.util.def
+index 691372d..0c8d38f 100644
+--- a/Makefile.util.def
++++ b/Makefile.util.def
+@@ -401,7 +401,7 @@ program = {
+   ldadd = libgrubgcry.a;
+   ldadd = libgrubkern.a;
+   ldadd = grub-core/gnulib/libgnu.a;
+-  ldadd = '$(LIBINTL) $(LIBDEVMAPPER) $(LIBUTIL) $(LIBGEOM)';
++  ldadd = '$(LIBINTL) $(LIBDEVMAPPER) $(LIBUTIL) $(LIBZFS) $(LIBNVPAIR) $(LIBGEOM)';
+ };
+ 
+ program = {
+diff --git a/configure.ac b/configure.ac
+index 735313d..6a5ab53 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1561,10 +1561,10 @@ fi
+ 
+ if test x"$libzfs_excuse" = x ; then
+   # We need both libzfs and libnvpair for a successful build.
+-  LIBZFS="-lzfs"
++  LIBZFS="/lib/libzfs.a /lib/libnvpair.a /lib/libzpool.a /lib/libuutil.a /lib/libzfs_core.a  -lpthread -luuid -lm -lz"
+   AC_DEFINE([HAVE_LIBZFS], [1],
+             [Define to 1 if you have the ZFS library.])
+-  LIBNVPAIR="-lnvpair"
++  LIBNVPAIR="/lib/libnvpair.a"
+   AC_DEFINE([HAVE_LIBNVPAIR], [1],
+             [Define to 1 if you have the NVPAIR library.])
+ fi

@@ -80,7 +80,8 @@ confflags += \
 	--enable-quiet-boot \
 	--enable-quick-boot \
 	--enable-gfxpayload-dynamic \
-	--enable-vt-handoff
+	--enable-vt-handoff \
+	--enable-libzfs
 substvars := \
 	-Vlsb-base-depends="lsb-base (>= 3.0-6)" \
 	-Vgfxpayload-depends="grub-gfxpayload-lists [any-i386 any-amd64]"
