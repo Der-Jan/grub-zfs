@@ -1,6 +1,7 @@
-grub2 (2.02~beta2-9ubuntu1.zfs1) UNRELEASED; urgency=medium
+grub2 (2.02~beta2-9ubuntu1.zfs1) trusty; urgency=low
 
   * Link libzfs statically
+  * 
 
  -- Jan Riechers <de@r-jan.de>  Sat, 23 Aug 2014 10:26:47 +0000
 
