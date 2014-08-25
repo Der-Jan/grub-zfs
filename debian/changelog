@@ -1,7 +1,12 @@
+grub2 (2.02~beta2-9ubuntu1.zfs2) trusty; urgency=low
+
+  * Add uuid and zlib to build depencies
+
+ -- Jan Riechers <de@r-jan.de>  Mon, 25 Aug 2014 07:12:33 +0000
+
 grub2 (2.02~beta2-9ubuntu1.zfs1) trusty; urgency=low
 
   * Link libzfs statically
-  * 
 
  -- Jan Riechers <de@r-jan.de>  Sat, 23 Aug 2014 10:26:47 +0000
 
