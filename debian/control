@@ -40,6 +40,8 @@ Build-Depends: debhelper (>= 7.4.2~),
  libxen-dev [i386 amd64],
  libzfs-dev,
  libnvpair-dev,
+ uuid-dev,
+ zlib1g-dev,
 Build-Conflicts: autoconf2.13
 Standards-Version: 3.8.4
 Homepage: http://www.gnu.org/software/grub/
